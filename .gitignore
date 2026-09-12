@@ -1,0 +1,10 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+
+.DS_Store
+data/manuals/*
+!data/manuals/manifest.json
+!data/manuals/.gitkeep
+script-validator-tool.code-workspace
