@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     # Embeddings provider
     embedding_provider: str = "gemini"
     gemini_api_key: str = ""
-    gemini_embedding_model: str = "text-embedding-004"
+    gemini_embedding_model: str = "gemini-embedding-2"
     embedding_dimensions: int = 768
 
     # Database

@@ -1,4 +1,4 @@
-from app.models.schemas import RawPage, SectionType, Chunk
+from app.models.schemas import RawPage, SectionType, Chunk, EmbeddedChunk
 from typing import List
 import json
 import logging
@@ -9,7 +9,10 @@ import fitz
 from pptx import Presentation
 import hashlib
 import re
-
+from app.clients.embedding_client import embed_batch
+from app.db.vector_store import upsert_chunks
+from app.config import get_settings
+from app.db.vector_store import existing_hashes
 
 logger = logging.getLogger(__name__)
 
@@ -62,6 +65,7 @@ def _load_pptx_pages(path: Path, product_name: str) -> List[RawPage]:
                 RawPage(product_name=product_name, page_number=slide_index + 1, text = text)
             )
     return pages
+
 
 def load_manuals(source_dir: str) -> List[RawPage]:
     source = Path(source_dir)
@@ -145,3 +149,33 @@ def chunk_document(pages: List[RawPage], chunk_size: int, chunk_overlap: int) ->
 
     logger.info("chunked %d pages into %d chunks", len(pages), len(chunks))
     return chunks
+
+
+def embed_chunks(chunks: List[Chunk]) -> List[EmbeddedChunk]:
+    if not chunks:
+        return []
+    vectors = embed_batch([chunk.text for chunk in chunks], task_type="RETRIEVAL_DOCUMENT")
+    return [
+        EmbeddedChunk(**chunk.model_dump(), vector=vector)
+        for chunk, vector in zip(chunks, vectors)
+    ]
+
+def store_chunks(embedded_chunks: List[EmbeddedChunk]) -> int:
+    return upsert_chunks(embedded_chunks)
+
+def run_ingestion(source_dir: str) -> dict:
+    settings = get_settings()
+    pages = load_manuals(source_dir)
+    chunks = chunk_document(pages, settings.chunk_size, settings.chunk_overlap)
+
+    already = existing_hashes([c.content_hash for c in chunks])
+    new_chunks = [c for c in chunks if c.content_hash not in already]
+    logger.info("%d chunks total, %d already stored, %d to embed", len(chunks), len(already), len(new_chunks))
+
+    stored = store_chunks(embed_chunks(new_chunks))
+    return {
+        "pages": len(pages),
+        "chunks": len(chunks),
+        "skipped": len(chunks) - len(new_chunks),
+        "stored": stored,
+    }
