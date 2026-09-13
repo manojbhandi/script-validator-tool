@@ -4,10 +4,10 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # LLM provider
-    llm_provider: str = "glm"
-    glm_api_key: str = ""
-    glm_base_url: str = "https://open.bigmodel.cn/api/paas/v4/"
-    glm_model: str = "glm-4-flash"
+    llm_provider: str = "gemini"
+    llm_api_key: str = ""
+    llm_base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai/"
+    llm_model: str = "gemini-3.6-flash"
 
     # Embeddings provider
     embedding_provider: str = "gemini"

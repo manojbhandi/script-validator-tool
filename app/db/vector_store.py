@@ -7,7 +7,7 @@ from pgvector.psycopg2 import register_vector
 from psycopg2.extras import execute_values
 
 from app.config import get_settings
-from app.models.schemas import EmbeddedChunk, ScoredChunk
+from app.models.schemas import EmbeddedChunk, ScoredChunk, Chunk
 
 logger = logging.getLogger(__name__)
 
@@ -107,4 +107,14 @@ def similarity_search(
             similarity=float(row[5]),
         )
         for row in rows
+    ]
+
+def fetch_all_chunks() -> List[Chunk]:
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute("select chunk_id, product_name, section_type, page_number, text, content_hash from manual_chunks")
+            rows = cur.fetchall()
+    return [
+        Chunk(chunk_id=r[0], product_name=r[1], section_type=r[2], page_number=r[3], text=r[4], content_hash=r[5])
+        for r in rows
     ]

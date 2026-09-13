@@ -67,3 +67,70 @@ class CoverageEntry(BaseModel):
     claim_id: str
     best_similarity: float
     status: RetrievalStatus
+
+class StructuredBrief(BaseModel):
+    target_audience: str
+    key_message: str
+    mandatory_inclusions: List[str] = []
+    tone: str
+    cta: str
+
+
+class BriefAlignmentScore(BaseModel):
+    score: int = Field(ge=0, le=10)
+    reasoning: str
+    missing_mandatory_inclusions: List[str] = []
+
+
+class MessageQualityScore(BaseModel):
+    score: int = Field(ge=0, le=10)
+    reasoning: str
+
+
+class ClaimVerdictEntry(BaseModel):
+    claim_id: str
+    verdict: ClaimVerdict
+    evidence: Optional[str] = None
+    source_chunk: Optional[str] = None
+
+
+class ClaimValidityScore(BaseModel):
+    score: int = Field(ge=0, le=10)
+    reasoning: str
+    claim_verdicts: List[ClaimVerdictEntry] = []
+
+
+class OfflineEvalBaseline(BaseModel):
+    recall_at_5: float
+    mrr: float
+    num_queries: int
+
+
+class Scorecard(BaseModel):
+    run_id: str
+    overall_score: float
+    overall_feedback: str
+    brief_alignment: BriefAlignmentScore
+    marketing_message_quality: MessageQualityScore
+    product_claim_validity: ClaimValidityScore
+    claims: List[Claim]
+    retrieval_coverage_report: List[CoverageEntry]
+    offline_eval_baseline: Optional[OfflineEvalBaseline] = None
+
+
+class ScoreRequest(BaseModel):
+    brief: str = Field(min_length=20)
+    script: str = Field(min_length=20)
+
+class EvalQuery(BaseModel):
+    question: str
+    expected_chunk_id: str
+    product_name: str
+
+
+class EvalQueryResult(BaseModel):
+    question: str
+    expected_chunk_id: str
+    rank: Optional[int] = None
+    top_chunk_id: Optional[str] = None
+    top_similarity: float

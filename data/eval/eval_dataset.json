@@ -1,0 +1,202 @@
+[
+  {
+    "question": "What percentage of the solvent (Amine Oxide) used in the mask sheet manufacturing is reclaimed for recycling?",
+    "expected_chunk_id": "ugly_lovely_mask_p8_c0",
+    "product_name": "ugly_lovely_mask"
+  },
+  {
+    "question": "What price range does the Alltimate line target according to its development background?",
+    "expected_chunk_id": "alltimate_line_4skus_p3_c0",
+    "product_name": "alltimate_line_4skus"
+  },
+  {
+    "question": "Which specific forms of Hyaluronic Acid are included in the Alltimate PDRN Hyalu 7 Serum?",
+    "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p7_c0",
+    "product_name": "alltimate_pdrn_hyalu_7_serum"
+  },
+  {
+    "question": "What types of zero-waste goods are mentioned in Ugly Lovely's product line?",
+    "expected_chunk_id": "ugly_lovely_brand_deck_p22_c0",
+    "product_name": "ugly_lovely_brand_deck"
+  },
+  {
+    "question": "From which historical dynasty's royal court does the product claim its rice water tradition originates?",
+    "expected_chunk_id": "rice_water_bright_cleansing_line_p2_c0",
+    "product_name": "rice_water_bright_cleansing_line"
+  },
+  {
+    "question": "What clinical test was completed to assess skin irritation for the Rice Water Bright Vegan Cream?",
+    "expected_chunk_id": "rice_water_bright_vegan_skincare_p10_c0",
+    "product_name": "rice_water_bright_vegan_skincare"
+  },
+  {
+    "question": "What is the measured pH value of the Rice Water Bright Vegan Mild pH Cleansing Gel Foam product formula?",
+    "expected_chunk_id": "rice_water_bright_vegan_skincare_p5_c0",
+    "product_name": "rice_water_bright_vegan_skincare"
+  },
+  {
+    "question": "By what percentage did the volume of pores improve after two weeks of using the TFS_Alltimate Niacinamide 10% Serum?",
+    "expected_chunk_id": "alltimate_line_4skus_p9_c0",
+    "product_name": "alltimate_line_4skus"
+  },
+  {
+    "question": "What is the percentage of niacinamide in the Alltimate Niacinamide Serum?",
+    "expected_chunk_id": "alltimate_line_4skus_p1_c0",
+    "product_name": "alltimate_line_4skus"
+  },
+  {
+    "question": "What percentage of respondents indicated they prefer companies that engage in ESG activities?",
+    "expected_chunk_id": "ugly_lovely_brand_deck_p4_c0",
+    "product_name": "ugly_lovely_brand_deck"
+  },
+  {
+    "question": "What is the exact percentage of Aloe Vera Leaf Water in the TFS Jeju Aloe Fresh Soothing Gel?",
+    "expected_chunk_id": "jeju_aloe_fresh_soothing_gel_p6_c0",
+    "product_name": "jeju_aloe_fresh_soothing_gel"
+  },
+  {
+    "question": "Which specific harmful ingredients are listed as being excluded from the Alltimate Vegan Mucin Peptide 8 Cream?",
+    "expected_chunk_id": "alltimate_vegan_mucin_peptide_p11_c0",
+    "product_name": "alltimate_vegan_mucin_peptide"
+  },
+  {
+    "question": "Which two vitamins are blended in the TFS_VITA DROP SUNQUID lightweight air liquid formula?",
+    "expected_chunk_id": "vita_drop_sunquid_p6_c0",
+    "product_name": "vita_drop_sunquid"
+  },
+  {
+    "question": "What percentage of the natural moisturizing factor (NMF) is contributed by the amino acid-derived ingredients in the Tea Tree Pore Clarifying Gel Cleanser?",
+    "expected_chunk_id": "tea_tree_pore_clarifying_gel_cleanser_p5_c0",
+    "product_name": "tea_tree_pore_clarifying_gel_cleanser"
+  },
+  {
+    "question": "What is the reported increase in skin penetration percentage of the spherical PDRN compared to thread\u2011shaped PDRN in the Alltimate PDRN Hyalu 7 Serum?",
+    "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p9_c0",
+    "product_name": "alltimate_pdrn_hyalu_7_serum"
+  },
+  {
+    "question": "What is the test period for the in vitro moisturization study conducted by LG H&H Research Center for the Alltimate PDRN Hyalu 7 Serum?",
+    "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p8_c0",
+    "product_name": "alltimate_pdrn_hyalu_7_serum"
+  },
+  {
+    "question": "What is the recommended waiting time after applying the Alltimate Vegan Mucin Peptide 8 Cream before it is absorbed faster?",
+    "expected_chunk_id": "alltimate_vegan_mucin_peptide_p12_c0",
+    "product_name": "alltimate_vegan_mucin_peptide"
+  },
+  {
+    "question": "Which seven harmful ingredients are explicitly excluded from the Rice Water Bright Vegan skincare formula?",
+    "expected_chunk_id": "rice_water_bright_vegan_skincare_p3_c0",
+    "product_name": "rice_water_bright_vegan_skincare"
+  },
+  {
+    "question": "What is the percentage of refined pure Niacinamide claimed in this product?",
+    "expected_chunk_id": "rice_water_bright_vegan_skincare_p7_c0",
+    "product_name": "rice_water_bright_vegan_skincare"
+  },
+  {
+    "question": "From which location is the Aloe sourced in the TFS Jeju Aloe Fresh Soothing Gel?",
+    "expected_chunk_id": "jeju_aloe_fresh_soothing_gel_p7_c0",
+    "product_name": "jeju_aloe_fresh_soothing_gel"
+  },
+  {
+    "question": "According to Figure 16, what percentage decrease in skin temperature was observed in the treated area in the TFS_VITA DROP SUNQUID clinical results?",
+    "expected_chunk_id": "vita_drop_sunquid_p9_c0",
+    "product_name": "vita_drop_sunquid"
+  },
+  {
+    "question": "How many ugly farm products does Ugly Lovely plan to rescue through its collaboration with Uglyus?",
+    "expected_chunk_id": "ugly_lovely_brand_deck_p25_c0",
+    "product_name": "ugly_lovely_brand_deck"
+  },
+  {
+    "question": "What vitamin C derivative is listed as an ingredient in the Vitamin Lip Sleeping Mask?",
+    "expected_chunk_id": "vitamin_lip_sleeping_mask_p5_c0",
+    "product_name": "vitamin_lip_sleeping_mask"
+  },
+  {
+    "question": "According to the clinical tests, what percentage of dead skin does the TFS Alltimate Panthenol 2% Peeling Gel remove after a single use?",
+    "expected_chunk_id": "alltimate_line_4skus_p23_c0",
+    "product_name": "alltimate_line_4skus"
+  },
+  {
+    "question": "What is the purity percentage of the Panthenol used in the Ugly Lovely Carrot Mask?",
+    "expected_chunk_id": "ugly_lovely_mask_p11_c0",
+    "product_name": "ugly_lovely_mask"
+  },
+  {
+    "question": "Which literary character is referenced in Ugly Lovely's brand persona?",
+    "expected_chunk_id": "ugly_lovely_brand_deck_p17_c0",
+    "product_name": "ugly_lovely_brand_deck"
+  },
+  {
+    "question": "What exfoliating agents are highlighted in the Active Derma toner according to the manual?",
+    "expected_chunk_id": "dr_belmeur_active_derma_p12_c0",
+    "product_name": "dr_belmeur_active_derma"
+  },
+  {
+    "question": "What type of yeast and its source plant are used in the fermentation process of the Rice Water Bright Vegan skincare?",
+    "expected_chunk_id": "rice_water_bright_vegan_skincare_p4_c0",
+    "product_name": "rice_water_bright_vegan_skincare"
+  },
+  {
+    "question": "Which active ingredients are listed for the Niacinamide/TXA Dark Spot Serum in the Dr. Belmeur Active Derma line?",
+    "expected_chunk_id": "dr_belmeur_active_derma_p4_c0",
+    "product_name": "dr_belmeur_active_derma"
+  },
+  {
+    "question": "What percentage of the formula consists of skin-conditioning ingredients?",
+    "expected_chunk_id": "vita_drop_sunquid_p5_c0",
+    "product_name": "vita_drop_sunquid"
+  },
+  {
+    "question": "What is the net volume of the Rice Water Bright Massage Cream as listed in the product details?",
+    "expected_chunk_id": "rice_water_bright_cleansing_line_p4_c0",
+    "product_name": "rice_water_bright_cleansing_line"
+  },
+  {
+    "question": "What high-purity ingredient does the PDRN Hyalu 7 Serum contain, and how many types of hyaluronic acids are included?",
+    "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p2_c0",
+    "product_name": "alltimate_pdrn_hyalu_7_serum"
+  },
+  {
+    "question": "What is the volume (in milliliters) of the Multi-Vita 10% Brightening Serum?",
+    "expected_chunk_id": "alltimate_line_4skus_p14_c0",
+    "product_name": "alltimate_line_4skus"
+  },
+  {
+    "question": "What four brand personality descriptors are listed for the Ugly Lovely brand?",
+    "expected_chunk_id": "ugly_lovely_brand_deck_p14_c0",
+    "product_name": "ugly_lovely_brand_deck"
+  },
+  {
+    "question": "What is the volume and number of sheets per package of the Tea Tree Toner Pads?",
+    "expected_chunk_id": "tea_tree_toner_pads_p8_c0",
+    "product_name": "tea_tree_toner_pads"
+  },
+  {
+    "question": "What is the molecular weight of the low\u2011molecular weight hyaluronic acid used in the Ugly Lovely Mask?",
+    "expected_chunk_id": "ugly_lovely_mask_p9_c0",
+    "product_name": "ugly_lovely_mask"
+  },
+  {
+    "question": "According to the clinical test results, how quickly does the TFS_Alltimate Panthenol 1% Serum demonstrate visible improvement in skin moisture density?",
+    "expected_chunk_id": "alltimate_line_4skus_p13_c0",
+    "product_name": "alltimate_line_4skus"
+  },
+  {
+    "question": "What source of raw materials does Ugly Lovely use in its products to reduce waste?",
+    "expected_chunk_id": "ugly_lovely_brand_deck_p10_c0",
+    "product_name": "ugly_lovely_brand_deck"
+  },
+  {
+    "question": "What usage claim is stated for the tea tree toner pads in terms of percentage?",
+    "expected_chunk_id": "tea_tree_toner_pads_p7_c0",
+    "product_name": "tea_tree_toner_pads"
+  },
+  {
+    "question": "What is the price and weight of the UGLY LOVELY Fig Mask?",
+    "expected_chunk_id": "ugly_lovely_brand_deck_p19_c0",
+    "product_name": "ugly_lovely_brand_deck"
+  }
+]

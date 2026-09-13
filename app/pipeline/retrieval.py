@@ -12,7 +12,8 @@ def retrieve_for_claims(claims: List[Claim], top_k: int) -> List[ClaimRetrieval]
     results: List[ClaimRetrieval] = []
     for claim in claims:
         query_vector = embed(claim.text, task_type="RETRIEVAL_QUERY")
-        chunks = similarity_search(query_vector, top_k=top_k, product_name=claim.product_reference)
+        chunks = similarity_search(query_vector, top_k=top_k, product_name=None)
+        # chunks = similarity_search(query_vector, top_k=top_k, product_name=claim.product_reference)
         logger.info(
             "claim %s: top match %s (%.3f)",
             claim.claim_id,

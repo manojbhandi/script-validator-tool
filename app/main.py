@@ -1,10 +1,12 @@
 from fastapi import FastAPI
+from app.routers import ingest, score
 
 from app.config import get_settings
-from app.routers import ingest
 
 app = FastAPI(title="Creative Script Validation Service")
 app.include_router(ingest.router)
+app.include_router(score.router)
+
 
 
 @app.get("/health")
