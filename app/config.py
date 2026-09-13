@@ -24,7 +24,7 @@ class Settings(BaseSettings):
 
     # Retrieval
     retrieval_top_k: int = 5
-    similarity_threshold: float = 0.6
+    similarity_threshold: float = 0.68
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 

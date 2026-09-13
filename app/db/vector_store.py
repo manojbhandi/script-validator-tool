@@ -1,13 +1,13 @@
 import logging
 from contextlib import contextmanager
-from typing import Generator, List, Set
+from typing import Generator, List, Set, Optional
 
 import psycopg2
 from pgvector.psycopg2 import register_vector
 from psycopg2.extras import execute_values
 
 from app.config import get_settings
-from app.models.schemas import EmbeddedChunk
+from app.models.schemas import EmbeddedChunk, ScoredChunk
 
 logger = logging.getLogger(__name__)
 
@@ -74,3 +74,37 @@ def upsert_chunks(chunks: List[EmbeddedChunk]) -> int:
             )
     logger.info("upserted %d chunks", len(rows))
     return len(rows)
+
+def similarity_search(
+    query_vector: List[float],
+    top_k: int,
+    product_name: Optional[str] = None,
+) -> List[ScoredChunk]:
+    sql = """
+        select chunk_id, product_name, section_type, page_number, text,
+               1 - (embedding <=> %s::vector) as similarity
+        from manual_chunks
+    """
+    params: list = [query_vector]
+    if product_name:
+        sql += " where product_name = %s"
+        params.append(product_name)
+    sql += " order by embedding <=> %s::vector limit %s"
+    params.extend([query_vector, top_k])
+
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            rows = cur.fetchall()
+
+    return [
+        ScoredChunk(
+            chunk_id=row[0],
+            product_name=row[1],
+            section_type=row[2],
+            page_number=row[3],
+            text=row[4],
+            similarity=float(row[5]),
+        )
+        for row in rows
+    ]

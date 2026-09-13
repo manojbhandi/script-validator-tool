@@ -51,3 +51,19 @@ class ScoredChunk(BaseModel):
     text: str
     similarity: float = Field(ge=-1.0, le=1.0)
 
+
+class Claim(BaseModel):
+    claim_id: str
+    text: str
+    product_reference: Optional[str] = None
+
+
+class ClaimRetrieval(BaseModel):
+    claim_id: str
+    chunks: List[ScoredChunk]
+
+
+class CoverageEntry(BaseModel):
+    claim_id: str
+    best_similarity: float
+    status: RetrievalStatus
