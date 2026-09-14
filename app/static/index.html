@@ -92,7 +92,9 @@ $('go').onclick = async () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ brief, script })
     });
-    const data = await res.json();
+    const text = await res.text();
+    let data;
+    try { data = JSON.parse(text); } catch { throw new Error('HTTP ' + res.status + ' - the server returned a non-JSON response. It may be restarting; try again in a few seconds.'); }
     if (!res.ok) throw new Error(data.detail || ('HTTP ' + res.status));
     render(data);
   } catch (e) {
