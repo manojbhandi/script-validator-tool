@@ -58,11 +58,14 @@ def build_final_report(
     claims: List[Claim],
     coverage: List[CoverageEntry],
 ) -> Scorecard:
-    overall = (
-        WEIGHTS["brief_alignment"] * alignment.score
-        + WEIGHTS["message_quality"] * quality.score
-        + WEIGHTS["claim_validity"] * validity.score
-    )
+    axis_scores = {
+        "brief_alignment": alignment.score,
+        "message_quality": quality.score,
+    }
+    if claims:
+        axis_scores["claim_validity"] = validity.score
+    total_weight = sum(WEIGHTS[k] for k in axis_scores)
+    overall = sum(WEIGHTS[k] * s for k, s in axis_scores.items()) / total_weight
     run_id = datetime.now(timezone.utc).strftime("run_%Y%m%d_%H%M%S_") + uuid4().hex[:6]
     return Scorecard(
         run_id=run_id,

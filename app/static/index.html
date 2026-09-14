@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Script Validator</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --line:#e3e6ea; --ink:#1c2024; --muted:#6b7280;
+          --good:#15803d; --warn:#b45309; --bad:#b91c1c; --accent:#1d4ed8; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:32px 20px; background:var(--bg); color:var(--ink);
+         font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+  .wrap { max-width:920px; margin:0 auto; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px;
+          padding:20px; margin-bottom:16px; }
+  label { display:block; font-weight:600; margin-bottom:6px; font-size:13px; }
+  textarea { width:100%; min-height:150px; padding:10px; border:1px solid var(--line);
+             border-radius:8px; font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; resize:vertical; }
+  button { background:var(--accent); color:#fff; border:0; border-radius:8px;
+           padding:11px 20px; font-size:15px; font-weight:600; cursor:pointer; }
+  button:disabled { opacity:.55; cursor:not-allowed; }
+  .row { display:flex; gap:16px; flex-wrap:wrap; }
+  .row > div { flex:1 1 380px; }
+  .scores { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:8px; }
+  .score { flex:1 1 150px; border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .score b { display:block; font-size:26px; }
+  .score span { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  .overall { background:#eef2ff; border-color:#c7d2fe; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.04em; }
+  .tag { display:inline-block; padding:2px 8px; border-radius:99px; font-size:11px; font-weight:600; }
+  .supported{background:#dcfce7;color:var(--good)} .contradicted{background:#fee2e2;color:var(--bad)}
+  .unsupported{background:#fef3c7;color:var(--warn)} .unverifiable{background:#e5e7eb;color:var(--muted)}
+  .well_grounded{background:#dcfce7;color:var(--good)} .low_confidence{background:#fef3c7;color:var(--warn)}
+  .muted { color:var(--muted); font-size:13px; }
+  .err { background:#fee2e2; color:var(--bad); padding:12px; border-radius:8px; }
+  code { font-size:12px; background:#f3f4f6; padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Creative Script Validator</h1>
+  <p class="sub">Scores an advertising script against its campaign brief, and fact-checks every product claim against the THE FACE SHOP product manuals.</p>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <label for="brief">Campaign brief</label>
+        <textarea id="brief" placeholder="Audience, key message, mandatory inclusions, tone, CTA..."></textarea>
+      </div>
+      <div>
+        <label for="script">Script</label>
+        <textarea id="script" placeholder="The ad copy to review..."></textarea>
+      </div>
+    </div>
+    <p style="margin:14px 0 0">
+      <button id="go">Validate script</button>
+      <button id="sample" style="background:#6b7280;margin-left:8px">Load example</button>
+    </p>
+  </div>
+
+  <div id="out"></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+const SAMPLE_BRIEF = `Product: Alltimate PDRN Hyalu 7 Serum.
+Audience: women 25-35 with dry, dull skin who already use serums.
+Key message: deep hydration that shows as glow.
+Must mention: 97% PDRN, 7 hyaluronic acids, vegan certification.
+Tone: confident, science-backed, warm.
+CTA: Shop now at THE FACE SHOP.`;
+
+const SAMPLE_SCRIPT = `Meet the Alltimate PDRN Hyalu 7 Serum. Formulated with 97% pure PDRN and seven types of hyaluronic acid, it delivers moisture 1/210th the size of a pore - deep where it counts. Clinically proven to boost glow in just two weeks. Vegan certified, and free from parabens. Your skin will thank you. Available now at THE FACE SHOP - 30ml.`;
+
+$('sample').onclick = () => { $('brief').value = SAMPLE_BRIEF; $('script').value = SAMPLE_SCRIPT; };
+
+$('go').onclick = async () => {
+  const brief = $('brief').value.trim(), script = $('script').value.trim();
+  if (!brief || !script) { $('out').innerHTML = '<div class="card err">Enter both a brief and a script.</div>'; return; }
+
+  $('go').disabled = true;
+  $('out').innerHTML = '<div class="card muted">Scoring - extracting claims, retrieving manual sections, grading. This takes around 30 seconds.</div>';
+
+  try {
+    const res = await fetch('/score', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ brief, script })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.detail || ('HTTP ' + res.status));
+    render(data);
+  } catch (e) {
+    $('out').innerHTML = '<div class="card err">' + esc(e.message) + '</div>';
+  } finally {
+    $('go').disabled = false;
+  }
+};
+
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function render(d) {
+  const claimText = Object.fromEntries(d.claims.map(c => [c.claim_id, c.text]));
+  const cov = Object.fromEntries(d.retrieval_coverage_report.map(c => [c.claim_id, c]));
+
+  const verdicts = d.product_claim_validity.claim_verdicts.map(v => `
+    <tr>
+      <td><b>${esc(claimText[v.claim_id] || v.claim_id)}</b></td>
+      <td><span class="tag ${v.verdict}">${v.verdict}</span></td>
+      <td>${esc(v.evidence || '-')}${v.source_chunk ? '<br><code>' + esc(v.source_chunk) + '</code>' : ''}</td>
+      <td>${cov[v.claim_id] ? `<span class="tag ${cov[v.claim_id].status}">${cov[v.claim_id].best_similarity}</span>` : '-'}</td>
+    </tr>`).join('');
+
+  const base = d.offline_eval_baseline;
+
+  $('out').innerHTML = `
+    <div class="card">
+      <div class="scores">
+        <div class="score overall"><span>Overall</span><b>${d.overall_score}</b></div>
+        <div class="score"><span>Brief alignment</span><b>${d.brief_alignment.score}</b></div>
+        <div class="score"><span>Message quality</span><b>${d.marketing_message_quality.score}</b></div>
+        <div class="score"><span>Claim validity</span><b>${d.product_claim_validity.score}</b></div>
+      </div>
+      <p style="margin:12px 0 0"><b>${esc(d.overall_feedback)}</b></p>
+      <p class="muted" style="margin-top:6px">Run <code>${esc(d.run_id)}</code></p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Brief alignment</h3>
+      <p>${esc(d.brief_alignment.reasoning)}</p>
+      ${d.brief_alignment.missing_mandatory_inclusions.length
+        ? '<p class="muted">Missing mandatory inclusions: ' + d.brief_alignment.missing_mandatory_inclusions.map(esc).join(', ') + '</p>'
+        : '<p class="muted">All mandatory inclusions present.</p>'}
+      <h3>Marketing message quality</h3>
+      <p>${esc(d.marketing_message_quality.reasoning)}</p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Claim verification</h3>
+      <p class="muted">${esc(d.product_claim_validity.reasoning)}</p>
+      ${verdicts ? `<table><tr><th>Claim</th><th>Verdict</th><th>Evidence from manual</th><th>Retrieval</th></tr>${verdicts}</table>`
+                 : '<p class="muted">No checkable claims found in this script.</p>'}
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Retrieval quality</h3>
+      <p class="muted">Per-run grounding confidence is shown per claim above. Offline baseline over a labelled question set:</p>
+      ${base ? `<p>Recall@5 <b>${base.recall_at_5}</b> &nbsp; MRR <b>${base.mrr}</b> &nbsp; <span class="muted">(${base.num_queries} queries)</span></p>`
+             : '<p class="muted">No offline eval baseline available.</p>'}
+    </div>`;
+}
+</script>
+</body>
+</html>

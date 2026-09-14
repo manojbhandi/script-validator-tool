@@ -26,6 +26,8 @@ Judge ONLY brief fit, not writing quality or factual accuracy:
 - Does it end with the requested call to action?
 
 A polished script that ignores the brief should score low.
+If the brief is empty or states no usable requirements, score 0 and say so in the reasoning -
+an unmeasurable brief is not a satisfied brief.
 
 BRIEF (structured):
 target_audience: {target_audience}
@@ -95,7 +97,7 @@ def score_claim_validity(
     coverage: List[CoverageEntry],
 ) -> ClaimValidityScore:
     if not claims:
-        return ClaimValidityScore(score=10, reasoning="The script makes no checkable product claims.")
+        return ClaimValidityScore(score=10, reasoning="The script makes no checkable product claims; this axis is excluded from the overall score.")
 
     retrieval_by_id = {r.claim_id: r for r in retrievals}
     status_by_id = {c.claim_id: c.status for c in coverage}
