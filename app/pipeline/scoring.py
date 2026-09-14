@@ -16,6 +16,10 @@ from app.models.schemas import (
 
 logger = logging.getLogger(__name__)
 
+EVIDENCE_CHUNKS_PER_CLAIM = 4
+EVIDENCE_CHAR_BUDGET = 16000
+MIN_CHARS_PER_CHUNK = 250
+
 BRIEF_ALIGNMENT_PROMPT = """Score how well this advertising script delivers the campaign brief, 0-10.
 
 Judge ONLY brief fit, not writing quality or factual accuracy:
@@ -104,16 +108,22 @@ def score_claim_validity(
     retrieval_by_id = {r.claim_id: r for r in retrievals}
     status_by_id = {c.claim_id: c.status for c in coverage}
 
+    per_chunk_chars = max(
+        MIN_CHARS_PER_CHUNK,
+        EVIDENCE_CHAR_BUDGET // (len(claims) * EVIDENCE_CHUNKS_PER_CLAIM),
+    )
+
     blocks = []
     for claim in claims:
-        chunks = retrieval_by_id[claim.claim_id].chunks
+        chunks = retrieval_by_id[claim.claim_id].chunks[:EVIDENCE_CHUNKS_PER_CLAIM]
         low = status_by_id[claim.claim_id] == RetrievalStatus.LOW_CONFIDENCE
         header = f"CLAIM {claim.claim_id}: {claim.text}" + ("   [LOW CONFIDENCE RETRIEVAL]" if low else "")
         excerpts = "\n".join(
-            f"  [{c.chunk_id}] (p.{c.page_number}, similarity {c.similarity:.2f})\n  {c.text}"
+            f"  [{c.chunk_id}] (p.{c.page_number}, similarity {c.similarity:.2f})\n  {c.text[:per_chunk_chars]}"
             for c in chunks
         )
         blocks.append(f"{header}\n{excerpts}")
+    logger.info("claim validity prompt: %d claims, %d chars/chunk", len(claims), per_chunk_chars)
 
     result = generate_structured(CLAIM_VALIDITY_PROMPT.format(claims_block="\n\n".join(blocks)), ClaimValidityScore)
     logger.info(
