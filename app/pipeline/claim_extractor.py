@@ -22,6 +22,8 @@ usage instructions, what the product is free from, awards, or guarantees.
 
 Do NOT extract marketing flourish or subjective language ("glow like never before",
 "your new favourite"). Do NOT paraphrase - keep the claim close to the script's wording.
+Do NOT extract where the product is sold, its price, or availability - only facts about the
+product itself that a manual could confirm.
 If the script names a product line or product, set product_reference to it; otherwise null.
 
 Number claims c1, c2, c3 ... in order of appearance.

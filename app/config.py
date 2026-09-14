@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     chunk_overlap: int = 50
 
     # Retrieval
-    retrieval_top_k: int = 5
+    retrieval_top_k: int = 8
     similarity_threshold: float = 0.68
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")

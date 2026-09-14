@@ -21,7 +21,9 @@ BRIEF_ALIGNMENT_PROMPT = """Score how well this advertising script delivers the 
 Judge ONLY brief fit, not writing quality or factual accuracy:
 - Is it written for the target audience?
 - Does it land the key message?
-- Is every mandatory inclusion present? List any that are missing verbatim.
+- Is every mandatory inclusion present? Match on substance, not wording: an inclusion written
+  as "salicylic acid (BHA)" is present if the script says "salicylic acid". List only
+  inclusions whose substance is genuinely absent.
 - Does the tone match?
 - Does it end with the requested call to action?
 
