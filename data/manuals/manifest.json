@@ -1,23 +1,217 @@
 [
-  {"file": "TFS_PDRN_Hyalu_7_serum_250818_v1_Eng.pptx",                      "product_name": "alltimate_pdrn_hyalu_7_serum",        "line": "Alltimate"},
-  {"file": "Global_TFS_Alltimate_Vegan_Mucin_Peptide(2SKU)_250320_EN.pptx",   "product_name": "alltimate_vegan_mucin_peptide",       "line": "Alltimate"},
-  {"file": "ENGTFS__Alltimate_4Skus_2404.pptx",                               "product_name": "alltimate_line_4skus",                "line": "Alltimate"},
-
-  {"file": "ENGTFS_Rice_Water_Bright_Vegan_skincare_2401.pptx",               "product_name": "rice_water_bright_vegan_skincare",    "line": "Rice Water Bright"},
-  {"file": "TFSRiceWaterBright_MoistureSunscreen_upload_KOR_eng.pptx",        "product_name": "rice_water_bright_moisture_sunscreen","line": "Rice Water Bright"},
-  {"file": "2018-11_Rice_Water_Bright_Cleansing_Line_updated.pptx",           "product_name": "rice_water_bright_cleansing_line",    "line": "Rice Water Bright"},
-
-  {"file": "[Training] TFS_Tea_Tree_Toner_Pads_202206.pptx",                  "product_name": "tea_tree_toner_pads",                 "line": "Tea Tree"},
-  {"file": "[Training] TFS_Tea_Tree_Pore_Cream_202209.pptx",                  "product_name": "tea_tree_pore_cream",                 "line": "Tea Tree"},
-  {"file": "[Training] Tea_Tree_Pore_Ampoule_202207.pptx",                    "product_name": "tea_tree_pore_ampoule",               "line": "Tea Tree"},
-  {"file": "[Training] Tea_Tree_Pore_Clarifying_Gel_Cleanser_202209.pptx",    "product_name": "tea_tree_pore_clarifying_gel_cleanser","line": "Tea Tree"},
-
-  {"file": "Dr_Belmeur_Active_Derma(3SKUs)_250407_EN.pptx",                   "product_name": "dr_belmeur_active_derma",             "line": "Dr. Belmeur"},
-  {"file": "2020-09_Dr_Belmeur_Pro-Retinol_Serum.pptx",                       "product_name": "dr_belmeur_pro_retinol_serum",        "line": "Dr. Belmeur"},
-
-  {"file": "TFS_Jeju_Aloe_Fresh_Soothing_Gel(2SKUs)_250805_EN.pptx",          "product_name": "jeju_aloe_fresh_soothing_gel",        "line": "Jeju Aloe"},
-  {"file": "(202307)_TFS_Vitamin_Lip_Sleeping_Mask_(en).pptx",                "product_name": "vitamin_lip_sleeping_mask",           "line": "Vitamin"},
-  {"file": "ENGTFS_Vita_Drop_Sunquid_2403.pptx",                              "product_name": "vita_drop_sunquid",                   "line": "Vitamin"},
-  {"file": "ENGTFS_UGLY,LOVELY_Mask_5SKUs_2404.pptx",                         "product_name": "ugly_lovely_mask",                    "line": "Ugly Lovely"},
-  {"file": "UglyLovely.pdf",                                                  "product_name": "ugly_lovely_brand_deck",              "line": "Ugly Lovely"}
+  {
+    "file": "TFS_PDRN_Hyalu_7_serum_250818_v1_Eng.pptx",
+    "product_name": "alltimate_pdrn_hyalu_7_serum",
+    "line": "Alltimate"
+  },
+  {
+    "file": "Global_TFS_Alltimate_Vegan_Mucin_Peptide(2SKU)_250320_EN.pptx",
+    "product_name": "alltimate_vegan_mucin_peptide",
+    "line": "Alltimate"
+  },
+  {
+    "file": "ENGTFS__Alltimate_4Skus_2404.pptx",
+    "product_name": "alltimate_line_4skus",
+    "line": "Alltimate"
+  },
+  {
+    "file": "ENGTFS_Rice_Water_Bright_Vegan_skincare_2401.pptx",
+    "product_name": "rice_water_bright_vegan_skincare",
+    "line": "Rice Water Bright"
+  },
+  {
+    "file": "TFSRiceWaterBright_MoistureSunscreen_upload_KOR_eng.pptx",
+    "product_name": "rice_water_bright_moisture_sunscreen",
+    "line": "Rice Water Bright"
+  },
+  {
+    "file": "2018-11_Rice_Water_Bright_Cleansing_Line_updated.pptx",
+    "product_name": "rice_water_bright_cleansing_line",
+    "line": "Rice Water Bright"
+  },
+  {
+    "file": "[Training] TFS_Tea_Tree_Toner_Pads_202206.pptx",
+    "product_name": "tea_tree_toner_pads",
+    "line": "Tea Tree"
+  },
+  {
+    "file": "[Training] TFS_Tea_Tree_Pore_Cream_202209.pptx",
+    "product_name": "tea_tree_pore_cream",
+    "line": "Tea Tree"
+  },
+  {
+    "file": "[Training] Tea_Tree_Pore_Ampoule_202207.pptx",
+    "product_name": "tea_tree_pore_ampoule",
+    "line": "Tea Tree"
+  },
+  {
+    "file": "[Training] Tea_Tree_Pore_Clarifying_Gel_Cleanser_202209.pptx",
+    "product_name": "tea_tree_pore_clarifying_gel_cleanser",
+    "line": "Tea Tree"
+  },
+  {
+    "file": "Dr_Belmeur_Active_Derma(3SKUs)_250407_EN.pptx",
+    "product_name": "dr_belmeur_active_derma",
+    "line": "Dr. Belmeur"
+  },
+  {
+    "file": "2020-09_Dr_Belmeur_Pro-Retinol_Serum.pptx",
+    "product_name": "dr_belmeur_pro_retinol_serum",
+    "line": "Dr. Belmeur"
+  },
+  {
+    "file": "TFS_Jeju_Aloe_Fresh_Soothing_Gel(2SKUs)_250805_EN.pptx",
+    "product_name": "jeju_aloe_fresh_soothing_gel",
+    "line": "Jeju Aloe"
+  },
+  {
+    "file": "(202307)_TFS_Vitamin_Lip_Sleeping_Mask_(en).pptx",
+    "product_name": "vitamin_lip_sleeping_mask",
+    "line": "Vitamin"
+  },
+  {
+    "file": "ENGTFS_Vita_Drop_Sunquid_2403.pptx",
+    "product_name": "vita_drop_sunquid",
+    "line": "Vitamin"
+  },
+  {
+    "file": "ENGTFS_UGLY,LOVELY_Mask_5SKUs_2404.pptx",
+    "product_name": "ugly_lovely_mask",
+    "line": "Ugly Lovely"
+  },
+  {
+    "file": "UglyLovely.pdf",
+    "product_name": "ugly_lovely_brand_deck",
+    "line": "Ugly Lovely"
+  },
+  {
+    "file": "(ENG) THE FACE SHOP ALLTIMATE LINE_updated 240726.pptx",
+    "product_name": "alltimate_line_overview",
+    "line": "Alltimate"
+  },
+  {
+    "file": " TFS_Tea_Tree_Pore_Cream_Data.pptx",
+    "product_name": "tea_tree_pore_cream_data",
+    "line": "Tea Tree"
+  },
+  {
+    "file": "Tea_Tree_Pore_Ampoule_Data.pptx",
+    "product_name": "tea_tree_pore_ampoule_data",
+    "line": "Tea Tree"
+  },
+  {
+    "file": "Tea Tree product introduction.pptx",
+    "product_name": "tea_tree_line_overview",
+    "line": "Tea Tree"
+  },
+  {
+    "file": "(Introduction) Rice Water  Bright update_Mar 2026_260316.pdf",
+    "product_name": "rice_water_bright_line_overview",
+    "line": "Rice Water Bright"
+  },
+  {
+    "file": "2019-08_Rice_Water_Bright_Face_Mask_(2_SKU).pptx",
+    "product_name": "rice_water_bright_face_mask",
+    "line": "Rice Water Bright"
+  },
+  {
+    "file": "2011-10_Rice_Ceramide_8êÿ8áò.pptx",
+    "product_name": "rice_ceramide",
+    "line": "Rice"
+  },
+  {
+    "file": "2018-02_Dr__Belmeur_(New_Clarifying_Centelladerm_Ointment_Updated SPOT PATCH).pptx",
+    "product_name": "dr_belmeur_clarifying_centelladerm",
+    "line": "Dr. Belmeur"
+  },
+  {
+    "file": "2018-11_Dr__Belmeur_Advanced_(Ampoule_added).pptx",
+    "product_name": "dr_belmeur_advanced",
+    "line": "Dr. Belmeur"
+  },
+  {
+    "file": "2019-09_Dr_Belmeur_Clean_Face_2_SKU.pptx",
+    "product_name": "dr_belmeur_clean_face",
+    "line": "Dr. Belmeur"
+  },
+  {
+    "file": "2019-08_Herb_Day_365_Master_Blending_Cleansing_Line.pptx",
+    "product_name": "herb_day_365_cleansing_line",
+    "line": "Herb Day 365"
+  },
+  {
+    "file": "2019-08_Herb_Day_365_Master_Blending_Mask_(3_SKU).pptx",
+    "product_name": "herb_day_365_mask",
+    "line": "Herb Day 365"
+  },
+  {
+    "file": "Jeju_Aloe_Fresh_Soothing_Foam_Cleanser_202005.pptx",
+    "product_name": "jeju_aloe_fresh_soothing_foam_cleanser",
+    "line": "Jeju Aloe"
+  },
+  {
+    "file": "Jeju_Volcanic_Lava_Cleansing_line_renewal_(9_sku)_202004.pptx",
+    "product_name": "jeju_volcanic_lava_cleansing_line",
+    "line": "Jeju Volcanic Lava"
+  },
+  {
+    "file": "Natural_Sun_Eco_renewal_(6_SKU)_202004.pptx",
+    "product_name": "natural_sun_eco",
+    "line": "Natural Sun Eco"
+  },
+  {
+    "file": "2017-05_White_Seed_Renewal_(Added).pptx",
+    "product_name": "white_seed",
+    "line": "White Seed"
+  },
+  {
+    "file": "Seed Line Chia Green Mango.pptx",
+    "product_name": "seed_line_chia_green_mango",
+    "line": "Seed"
+  },
+  {
+    "file": "2014-06_Pomegranate_and_Collagen_(Updated)_8êÿ8áò.pptx",
+    "product_name": "pomegranate_and_collagen",
+    "line": "Pomegranate & Collagen"
+  },
+  {
+    "file": "2012-12_Smart_Peeling_Renewel.pdf",
+    "product_name": "smart_peeling",
+    "line": "Smart Peeling"
+  },
+  {
+    "file": "At_Home_Aesthetics_Mask_3_sku_202307 (1).pptx",
+    "product_name": "at_home_aesthetics_mask",
+    "line": "At Home Aesthetics"
+  },
+  {
+    "file": "EN_TFS__VITAMIN_BRIGHTENING_Foaming_Cleanser_2408.pptx",
+    "product_name": "vitamin_brightening_foaming_cleanser",
+    "line": "Vitamin"
+  },
+  {
+    "file": "TFS_Vitamin_Brightening_Serum_202208.pptx",
+    "product_name": "vitamin_brightening_serum",
+    "line": "Vitamin"
+  },
+  {
+    "file": "[Product Info] TFS Vitamin Lip Mask.pptx",
+    "product_name": "vitamin_lip_mask",
+    "line": "Vitamin"
+  },
+  {
+    "file": "ENG_TFS_the_therapy_Vegan_multi_lipcerin.pptx",
+    "product_name": "the_therapy_vegan_multi_lipcerin",
+    "line": "The Therapy"
+  },
+  {
+    "file": "[Training] The Therapy Vegan line (1).pptx",
+    "product_name": "the_therapy_vegan_line",
+    "line": "The Therapy"
+  },
+  {
+    "file": "TFS Brochure.pdf",
+    "product_name": "tfs_brand_brochure",
+    "line": "Brand"
+  }
 ]

@@ -47,7 +47,8 @@ in the manifest are skipped.
 Re-running ingestion is safe: each chunk has a sha256 of its text, and chunks already in the
 database are skipped instead of re-embedded.
 
-Current corpus: **195 chunks across 17 products**.
+Current corpus: **554 chunks across 42 products** (every file in the Drive folder except three
+legacy `.ppt` files and one brochure PDF that turned out to be scanned images with no text layer).
 
 **Scoring (per request):**
 
@@ -75,13 +76,17 @@ The assignment asked for retrieval accuracy after every run, so there are two pa
 chunks, so the correct answer chunk is known. Current numbers:
 
 ```
-Recall@5 = 0.875    MRR = 0.711    (40 queries)
+Recall@5 = 0.825    MRR = 0.702    (40 queries, 42-product corpus)
 ```
 
-25 of 40 were rank 1. Of the 5 misses, 4 landed on a *different slide of the same product deck* —
-usually a slide that says nearly the same thing — so the claim checker would still have got usable
-evidence. Only 1 miss went to a genuinely wrong product. So the real number is better than 0.875;
-the metric is strict because it requires the exact chunk id.
+25 of 40 were rank 1. The interesting part is the 7 misses: **all 7 landed on a different slide of
+the correct product deck**, and none went to the wrong product. Decks repeat themselves a lot, so
+the retrieved slide usually says nearly the same thing as the expected one. For claim checking,
+what matters is whether the right product's evidence comes back, and on that measure it was 40/40.
+
+An earlier run on a 17-product subset scored 0.875 / 0.711 with 1 cross-product miss. Tripling the
+corpus cost 5 points of exact-chunk recall but removed the cross-product error, which is the
+trade I would want.
 
 It's a synthetic benchmark — questions written *from* the chunk they're meant to find — so treat it
 as an upper bound and a regression check, not proof of real-world accuracy.
@@ -174,6 +179,9 @@ scorecard, a database hiccup shouldn't turn that into a 500.
   verdicts are stable; the numbers drift by a point.
 - **Re-running ingestion won't pick up chunking or tagging changes**, because the content hash is
   unchanged. You'd need to clear the table first.
+- **Identical slides across decks are stored once.** The dedup hash is of the text only, so a
+  boilerplate slide repeated in several decks keeps the product name of whichever deck was ingested
+  first. Only affects boilerplate in practice, but hashing product name + text would be the fix.
 - **Email and MCP interfaces aren't built.** Everything goes through one `run_pipeline(brief,
   script)` function and the HTTP route is a 3-line adapter over it, so another interface would be
   a thin wrapper — but I didn't have time to build them, so I'm not claiming they exist.

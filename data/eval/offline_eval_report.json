@@ -1,8 +1,162 @@
 {
-  "recall_at_5": 0.875,
-  "mrr": 0.711,
+  "recall_at_5": 0.825,
+  "mrr": 0.702,
   "num_queries": 40,
   "results": [
+    {
+      "question": "What two key active ingredients are highlighted in the Dark Spot Serum of the Dr. Belmeur Active Derma line?",
+      "expected_chunk_id": "dr_belmeur_active_derma_p4_c0",
+      "rank": 3,
+      "top_chunk_id": "dr_belmeur_active_derma_p5_c0",
+      "top_similarity": 0.772046995563676
+    },
+    {
+      "question": "Which trending K\u2011beauty ingredient does the product include that is typically animal\u2011derived but is presented in a vegan form?",
+      "expected_chunk_id": "alltimate_vegan_mucin_peptide_p14_c0",
+      "rank": null,
+      "top_chunk_id": "alltimate_vegan_mucin_peptide_p3_c0",
+      "top_similarity": 0.723448674223577
+    },
+    {
+      "question": "Which two ingredients are credited with creating a moisture barrier and reducing TEWL in this product?",
+      "expected_chunk_id": "pomegranate_and_collagen_p19_c0",
+      "rank": 1,
+      "top_chunk_id": "pomegranate_and_collagen_p19_c0",
+      "top_similarity": 0.746409541143471
+    },
+    {
+      "question": "Which component of the rice extracts is identified as a natural amino acid that improves skin elasticity?",
+      "expected_chunk_id": "rice_ceramide_p6_c0",
+      "rank": 1,
+      "top_chunk_id": "rice_ceramide_p6_c0",
+      "top_similarity": 0.727440360792433
+    },
+    {
+      "question": "How many bubbles are used in the bubble extraction technique for the rice extract, and over what duration?",
+      "expected_chunk_id": "rice_water_bright_line_overview_p13_c0",
+      "rank": null,
+      "top_chunk_id": "rice_water_bright_line_overview_p16_c0",
+      "top_similarity": 0.752004578135147
+    },
+    {
+      "question": "What storage precaution is recommended for the Vitamin Lip Sleeping Mask to prevent it from melting?",
+      "expected_chunk_id": "vitamin_lip_sleeping_mask_p4_c0",
+      "rank": 1,
+      "top_chunk_id": "vitamin_lip_sleeping_mask_p4_c0",
+      "top_similarity": 0.785499309927743
+    },
+    {
+      "question": "What is the volume of the Tea Tree Pore Clarifying Gel Cleanser?",
+      "expected_chunk_id": "tea_tree_pore_clarifying_gel_cleanser_p2_c0",
+      "rank": 2,
+      "top_chunk_id": "tea_tree_pore_clarifying_gel_cleanser_p7_c0",
+      "top_similarity": 0.715404743403252
+    },
+    {
+      "question": "What is the listed volume of the Dr. Belmeur Active Derma AHA/PHA Exfoliating Toner?",
+      "expected_chunk_id": "dr_belmeur_active_derma_p9_c0",
+      "rank": 1,
+      "top_chunk_id": "dr_belmeur_active_derma_p9_c0",
+      "top_similarity": 0.771758747414965
+    },
+    {
+      "question": "What is the concentration of Mango Seed Butter in the Mango Seed Moisturizing Eye Cream?",
+      "expected_chunk_id": "seed_line_chia_green_mango_p25_c0",
+      "rank": 1,
+      "top_chunk_id": "seed_line_chia_green_mango_p25_c0",
+      "top_similarity": 0.751869298129914
+    },
+    {
+      "question": "What is the niacinamide concentration in the Triple-Pore Texture Serum?",
+      "expected_chunk_id": "alltimate_line_4skus_p6_c0",
+      "rank": 1,
+      "top_chunk_id": "alltimate_line_4skus_p6_c0",
+      "top_similarity": 0.754812868528772
+    },
+    {
+      "question": "What is the patented ingredient exclusive to LG H&H that is listed as a common ingredient in the Alltimate line?",
+      "expected_chunk_id": "alltimate_line_4skus_p5_c0",
+      "rank": 1,
+      "top_chunk_id": "alltimate_line_4skus_p5_c0",
+      "top_similarity": 0.771802553711494
+    },
+    {
+      "question": "What is the listed product volume for the Tea Tree Pore Cream?",
+      "expected_chunk_id": "tea_tree_pore_cream_p8_c0",
+      "rank": 1,
+      "top_chunk_id": "tea_tree_pore_cream_p8_c0",
+      "top_similarity": 0.742735270252801
+    },
+    {
+      "question": "Which clinical tests were conducted to support the key message of the Rice Water Bright Foaming Cleanser?",
+      "expected_chunk_id": "rice_water_bright_line_overview_p9_c0",
+      "rank": 1,
+      "top_chunk_id": "rice_water_bright_line_overview_p9_c0",
+      "top_similarity": 0.755245284190023
+    },
+    {
+      "question": "What are the specific volumes or quantities for the foam, oil, and wipes in the Rice Water Bright line as listed in the product overview?",
+      "expected_chunk_id": "rice_water_bright_line_overview_p25_c0",
+      "rank": null,
+      "top_chunk_id": "rice_water_bright_line_overview_p12_c0",
+      "top_similarity": 0.738711777526221
+    },
+    {
+      "question": "What specific herbal fragrance components are listed for the Therapy Vegan Blending Toner?",
+      "expected_chunk_id": "the_therapy_vegan_line_p10_c0",
+      "rank": null,
+      "top_chunk_id": "the_therapy_vegan_line_p29_c0",
+      "top_similarity": 0.777530684832438
+    },
+    {
+      "question": "What specific claim does the training manual make about the line\u2019s hypoallergenic and Clean Beauty status?",
+      "expected_chunk_id": "alltimate_line_4skus_p2_c0",
+      "rank": 1,
+      "top_chunk_id": "alltimate_line_4skus_p2_c0",
+      "top_similarity": 0.78165613511992
+    },
+    {
+      "question": "What is the reported percentage increase in search volume for snail mucin in North America over the past five years?",
+      "expected_chunk_id": "alltimate_line_overview_p8_c0",
+      "rank": 1,
+      "top_chunk_id": "alltimate_line_overview_p8_c0",
+      "top_similarity": 0.761428720832666
+    },
+    {
+      "question": "What is the concentration of Mango Seed Butter in the Mango Seed Moisturizing Toner?",
+      "expected_chunk_id": "seed_line_chia_green_mango_p23_c0",
+      "rank": 1,
+      "top_chunk_id": "seed_line_chia_green_mango_p23_c0",
+      "top_similarity": 0.755529267551494
+    },
+    {
+      "question": "What are the volumes of the main Foaming Cleanser and its accompanying gift size in the GSP line renewal?",
+      "expected_chunk_id": "rice_water_bright_line_overview_p11_c0",
+      "rank": 1,
+      "top_chunk_id": "rice_water_bright_line_overview_p11_c0",
+      "top_similarity": 0.734983795355733
+    },
+    {
+      "question": "What is the stated purity percentage of the vitamin compounds in the Vital Vita Solution used in the Vitamin Brightening Serum?",
+      "expected_chunk_id": "vitamin_brightening_serum_p2_c0",
+      "rank": 3,
+      "top_chunk_id": "vitamin_brightening_serum_p3_c0",
+      "top_similarity": 0.764250131584977
+    },
+    {
+      "question": "Which 11 additives are explicitly excluded from the formulation of the Daily Repair Fresh Cleansing Water?",
+      "expected_chunk_id": "dr_belmeur_clarifying_centelladerm_p15_c0",
+      "rank": 1,
+      "top_chunk_id": "dr_belmeur_clarifying_centelladerm_p15_c0",
+      "top_similarity": 0.755975647485033
+    },
+    {
+      "question": "What are the seven specific types of Hyaluronic Acid incorporated in the Alltimate PDRN Hyalu 7 Serum?",
+      "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p7_c0",
+      "rank": 1,
+      "top_chunk_id": "alltimate_pdrn_hyalu_7_serum_p7_c0",
+      "top_similarity": 0.796460096304885
+    },
     {
       "question": "What percentage of the solvent (Amine Oxide) used in the mask sheet manufacturing is reclaimed for recycling?",
       "expected_chunk_id": "ugly_lovely_mask_p8_c0",
@@ -11,277 +165,123 @@
       "top_similarity": 0.718287427784085
     },
     {
-      "question": "What price range does the Alltimate line target according to its development background?",
-      "expected_chunk_id": "alltimate_line_4skus_p3_c0",
+      "question": "How many times more carotene does the Moisture Control Herb Complex contain compared to spinach?",
+      "expected_chunk_id": "dr_belmeur_clean_face_p5_c0",
       "rank": 1,
-      "top_chunk_id": "alltimate_line_4skus_p3_c0",
-      "top_similarity": 0.72838544504568
+      "top_chunk_id": "dr_belmeur_clean_face_p5_c0",
+      "top_similarity": 0.708131200080316
     },
     {
-      "question": "Which specific forms of Hyaluronic Acid are included in the Alltimate PDRN Hyalu 7 Serum?",
-      "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p7_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_pdrn_hyalu_7_serum_p7_c0",
-      "top_similarity": 0.792440647668029
-    },
-    {
-      "question": "What types of zero-waste goods are mentioned in Ugly Lovely's product line?",
-      "expected_chunk_id": "ugly_lovely_brand_deck_p22_c0",
-      "rank": 1,
-      "top_chunk_id": "ugly_lovely_brand_deck_p22_c0",
-      "top_similarity": 0.72655322925031
-    },
-    {
-      "question": "From which historical dynasty's royal court does the product claim its rice water tradition originates?",
-      "expected_chunk_id": "rice_water_bright_cleansing_line_p2_c0",
-      "rank": 1,
-      "top_chunk_id": "rice_water_bright_cleansing_line_p2_c0",
-      "top_similarity": 0.696413304637624
-    },
-    {
-      "question": "What clinical test was completed to assess skin irritation for the Rice Water Bright Vegan Cream?",
-      "expected_chunk_id": "rice_water_bright_vegan_skincare_p10_c0",
-      "rank": 1,
-      "top_chunk_id": "rice_water_bright_vegan_skincare_p10_c0",
-      "top_similarity": 0.774427571794831
-    },
-    {
-      "question": "What is the measured pH value of the Rice Water Bright Vegan Mild pH Cleansing Gel Foam product formula?",
-      "expected_chunk_id": "rice_water_bright_vegan_skincare_p5_c0",
-      "rank": 1,
-      "top_chunk_id": "rice_water_bright_vegan_skincare_p5_c0",
-      "top_similarity": 0.749296000537074
-    },
-    {
-      "question": "By what percentage did the volume of pores improve after two weeks of using the TFS_Alltimate Niacinamide 10% Serum?",
-      "expected_chunk_id": "alltimate_line_4skus_p9_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_line_4skus_p9_c0",
-      "top_similarity": 0.836480960031246
-    },
-    {
-      "question": "What is the percentage of niacinamide in the Alltimate Niacinamide Serum?",
-      "expected_chunk_id": "alltimate_line_4skus_p1_c0",
-      "rank": null,
-      "top_chunk_id": "alltimate_line_4skus_p8_c0",
-      "top_similarity": 0.754274374745662
-    },
-    {
-      "question": "What percentage of respondents indicated they prefer companies that engage in ESG activities?",
-      "expected_chunk_id": "ugly_lovely_brand_deck_p4_c0",
-      "rank": 1,
-      "top_chunk_id": "ugly_lovely_brand_deck_p4_c0",
-      "top_similarity": 0.596222270823425
-    },
-    {
-      "question": "What is the exact percentage of Aloe Vera Leaf Water in the TFS Jeju Aloe Fresh Soothing Gel?",
-      "expected_chunk_id": "jeju_aloe_fresh_soothing_gel_p6_c0",
-      "rank": 1,
-      "top_chunk_id": "jeju_aloe_fresh_soothing_gel_p6_c0",
-      "top_similarity": 0.799942375555687
-    },
-    {
-      "question": "Which specific harmful ingredients are listed as being excluded from the Alltimate Vegan Mucin Peptide 8 Cream?",
-      "expected_chunk_id": "alltimate_vegan_mucin_peptide_p11_c0",
-      "rank": 3,
-      "top_chunk_id": "alltimate_vegan_mucin_peptide_p5_c0",
-      "top_similarity": 0.754862807096081
-    },
-    {
-      "question": "Which two vitamins are blended in the TFS_VITA DROP SUNQUID lightweight air liquid formula?",
-      "expected_chunk_id": "vita_drop_sunquid_p6_c0",
-      "rank": 1,
-      "top_chunk_id": "vita_drop_sunquid_p6_c0",
-      "top_similarity": 0.847874454255662
-    },
-    {
-      "question": "What percentage of the natural moisturizing factor (NMF) is contributed by the amino acid-derived ingredients in the Tea Tree Pore Clarifying Gel Cleanser?",
-      "expected_chunk_id": "tea_tree_pore_clarifying_gel_cleanser_p5_c0",
-      "rank": 1,
-      "top_chunk_id": "tea_tree_pore_clarifying_gel_cleanser_p5_c0",
-      "top_similarity": 0.746740566196383
-    },
-    {
-      "question": "What is the reported increase in skin penetration percentage of the spherical PDRN compared to thread\u2011shaped PDRN in the Alltimate PDRN Hyalu 7 Serum?",
-      "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p9_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_pdrn_hyalu_7_serum_p9_c0",
-      "top_similarity": 0.788633239364786
-    },
-    {
-      "question": "What is the test period for the in vitro moisturization study conducted by LG H&H Research Center for the Alltimate PDRN Hyalu 7 Serum?",
-      "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p8_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_pdrn_hyalu_7_serum_p8_c0",
-      "top_similarity": 0.74684595829294
-    },
-    {
-      "question": "What is the recommended waiting time after applying the Alltimate Vegan Mucin Peptide 8 Cream before it is absorbed faster?",
-      "expected_chunk_id": "alltimate_vegan_mucin_peptide_p12_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_vegan_mucin_peptide_p12_c0",
-      "top_similarity": 0.746817091883831
-    },
-    {
-      "question": "Which seven harmful ingredients are explicitly excluded from the Rice Water Bright Vegan skincare formula?",
-      "expected_chunk_id": "rice_water_bright_vegan_skincare_p3_c0",
-      "rank": 3,
-      "top_chunk_id": "rice_water_bright_vegan_skincare_p6_c0",
-      "top_similarity": 0.737327494913495
-    },
-    {
-      "question": "What is the percentage of refined pure Niacinamide claimed in this product?",
-      "expected_chunk_id": "rice_water_bright_vegan_skincare_p7_c0",
-      "rank": 2,
-      "top_chunk_id": "alltimate_line_4skus_p8_c0",
-      "top_similarity": 0.731646877553297
-    },
-    {
-      "question": "From which location is the Aloe sourced in the TFS Jeju Aloe Fresh Soothing Gel?",
-      "expected_chunk_id": "jeju_aloe_fresh_soothing_gel_p7_c0",
-      "rank": null,
-      "top_chunk_id": "jeju_aloe_fresh_soothing_gel_p6_c0",
-      "top_similarity": 0.792122021681356
-    },
-    {
-      "question": "According to Figure 16, what percentage decrease in skin temperature was observed in the treated area in the TFS_VITA DROP SUNQUID clinical results?",
-      "expected_chunk_id": "vita_drop_sunquid_p9_c0",
-      "rank": 1,
-      "top_chunk_id": "vita_drop_sunquid_p9_c0",
-      "top_similarity": 0.855387280334287
-    },
-    {
-      "question": "How many ugly farm products does Ugly Lovely plan to rescue through its collaboration with Uglyus?",
-      "expected_chunk_id": "ugly_lovely_brand_deck_p25_c0",
-      "rank": 1,
-      "top_chunk_id": "ugly_lovely_brand_deck_p25_c0",
-      "top_similarity": 0.770832650357853
-    },
-    {
-      "question": "What vitamin C derivative is listed as an ingredient in the Vitamin Lip Sleeping Mask?",
-      "expected_chunk_id": "vitamin_lip_sleeping_mask_p5_c0",
+      "question": "What type of ingredients does the Ugly, Lovely! Mask use that emphasizes sustainability?",
+      "expected_chunk_id": "ugly_lovely_mask_p4_c0",
       "rank": 4,
-      "top_chunk_id": "vitamin_lip_sleeping_mask_p3_c0",
-      "top_similarity": 0.780602278714688
+      "top_chunk_id": "ugly_lovely_mask_p8_c0",
+      "top_similarity": 0.781880637508918
     },
     {
-      "question": "According to the clinical tests, what percentage of dead skin does the TFS Alltimate Panthenol 2% Peeling Gel remove after a single use?",
-      "expected_chunk_id": "alltimate_line_4skus_p23_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_line_4skus_p23_c0",
-      "top_similarity": 0.857525930662331
-    },
-    {
-      "question": "What is the purity percentage of the Panthenol used in the Ugly Lovely Carrot Mask?",
-      "expected_chunk_id": "ugly_lovely_mask_p11_c0",
-      "rank": 1,
-      "top_chunk_id": "ugly_lovely_mask_p11_c0",
-      "top_similarity": 0.793602514975149
-    },
-    {
-      "question": "Which literary character is referenced in Ugly Lovely's brand persona?",
-      "expected_chunk_id": "ugly_lovely_brand_deck_p17_c0",
-      "rank": 1,
-      "top_chunk_id": "ugly_lovely_brand_deck_p17_c0",
-      "top_similarity": 0.738360611777747
-    },
-    {
-      "question": "What exfoliating agents are highlighted in the Active Derma toner according to the manual?",
-      "expected_chunk_id": "dr_belmeur_active_derma_p12_c0",
-      "rank": 3,
-      "top_chunk_id": "dr_belmeur_active_derma_p10_c0",
-      "top_similarity": 0.764639665961716
-    },
-    {
-      "question": "What type of yeast and its source plant are used in the fermentation process of the Rice Water Bright Vegan skincare?",
-      "expected_chunk_id": "rice_water_bright_vegan_skincare_p4_c0",
-      "rank": 1,
-      "top_chunk_id": "rice_water_bright_vegan_skincare_p4_c0",
-      "top_similarity": 0.753880193083
-    },
-    {
-      "question": "Which active ingredients are listed for the Niacinamide/TXA Dark Spot Serum in the Dr. Belmeur Active Derma line?",
-      "expected_chunk_id": "dr_belmeur_active_derma_p4_c0",
-      "rank": 5,
-      "top_chunk_id": "dr_belmeur_active_derma_p14_c0",
-      "top_similarity": 0.814189074922136
-    },
-    {
-      "question": "What percentage of the formula consists of skin-conditioning ingredients?",
-      "expected_chunk_id": "vita_drop_sunquid_p5_c0",
+      "question": "What is the price and volume of the Milk & Jelly Double Foaming Cleanser in the Rice Water Bright line?",
+      "expected_chunk_id": "rice_water_bright_line_overview_p6_c0",
       "rank": null,
-      "top_chunk_id": "alltimate_vegan_mucin_peptide_p6_c0",
-      "top_similarity": 0.710112458021801
+      "top_chunk_id": "rice_water_bright_line_overview_p18_c0",
+      "top_similarity": 0.711664469511016
     },
     {
-      "question": "What is the net volume of the Rice Water Bright Massage Cream as listed in the product details?",
-      "expected_chunk_id": "rice_water_bright_cleansing_line_p4_c0",
+      "question": "How many female subjects participated in the clinical test conducted by Ellead Skin & Bio Research for Dr. Belmeur Hand Cream?",
+      "expected_chunk_id": "dr_belmeur_advanced_p22_c0",
       "rank": 1,
-      "top_chunk_id": "rice_water_bright_cleansing_line_p4_c0",
-      "top_similarity": 0.751141957525567
+      "top_chunk_id": "dr_belmeur_advanced_p22_c0",
+      "top_similarity": 0.775333922629783
     },
     {
-      "question": "What high-purity ingredient does the PDRN Hyalu 7 Serum contain, and how many types of hyaluronic acids are included?",
-      "expected_chunk_id": "alltimate_pdrn_hyalu_7_serum_p2_c0",
+      "question": "During which season is the Tea Tree Pore Cream specifically noted as suitable for use?",
+      "expected_chunk_id": "tea_tree_pore_cream_p7_c0",
+      "rank": 1,
+      "top_chunk_id": "tea_tree_pore_cream_p7_c0",
+      "top_similarity": 0.745027361267821
+    },
+    {
+      "question": "Which specific botanical extract does the Natural Sun Eco line emphasize for its antioxidant and UV\u2011protective benefits?",
+      "expected_chunk_id": "natural_sun_eco_p3_c0",
+      "rank": 1,
+      "top_chunk_id": "natural_sun_eco_p3_c0",
+      "top_similarity": 0.74505431848105
+    },
+    {
+      "question": "What is the patent application number for LG\u2019s research that increased the stability and efficacy of salicylic acid?",
+      "expected_chunk_id": "tea_tree_pore_ampoule_p4_c0",
+      "rank": 1,
+      "top_chunk_id": "tea_tree_pore_ampoule_p4_c0",
+      "top_similarity": 0.765294816659353
+    },
+    {
+      "question": "What is the listed quantity (volume) of the Jeju Aloe Fresh Soothing Foam Cleanser in the product details?",
+      "expected_chunk_id": "jeju_aloe_fresh_soothing_foam_cleanser_p4_c0",
+      "rank": 3,
+      "top_chunk_id": "jeju_aloe_fresh_soothing_foam_cleanser_p5_c0",
+      "top_similarity": 0.760365216667948
+    },
+    {
+      "question": "What next\u2011generation preservative, derived from caprylic acid, is used in Herb Day 365 Cleansing Cream?",
+      "expected_chunk_id": "herb_day_365_cleansing_line_p9_c0",
+      "rank": 1,
+      "top_chunk_id": "herb_day_365_cleansing_line_p9_c0",
+      "top_similarity": 0.808186997010771
+    },
+    {
+      "question": "What is the name of the line associated with the Dr. Belmeur Clarifying Centelladerm product?",
+      "expected_chunk_id": "dr_belmeur_clarifying_centelladerm_p2_c0",
       "rank": null,
-      "top_chunk_id": "alltimate_pdrn_hyalu_7_serum_p4_c0",
-      "top_similarity": 0.761606077348019
+      "top_chunk_id": "dr_belmeur_clarifying_centelladerm_p3_c0",
+      "top_similarity": 0.759167794855268
     },
     {
-      "question": "What is the volume (in milliliters) of the Multi-Vita 10% Brightening Serum?",
-      "expected_chunk_id": "alltimate_line_4skus_p14_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_line_4skus_p14_c0",
-      "top_similarity": 0.748988051244177
-    },
-    {
-      "question": "What four brand personality descriptors are listed for the Ugly Lovely brand?",
-      "expected_chunk_id": "ugly_lovely_brand_deck_p14_c0",
-      "rank": 3,
-      "top_chunk_id": "ugly_lovely_brand_deck_p17_c0",
-      "top_similarity": 0.779977631472407
-    },
-    {
-      "question": "What is the volume and number of sheets per package of the Tea Tree Toner Pads?",
-      "expected_chunk_id": "tea_tree_toner_pads_p8_c0",
-      "rank": 3,
-      "top_chunk_id": "tea_tree_toner_pads_p6_c0",
-      "top_similarity": 0.730976450245618
-    },
-    {
-      "question": "What is the molecular weight of the low\u2011molecular weight hyaluronic acid used in the Ugly Lovely Mask?",
-      "expected_chunk_id": "ugly_lovely_mask_p9_c0",
-      "rank": 1,
-      "top_chunk_id": "ugly_lovely_mask_p9_c0",
-      "top_similarity": 0.741657428590661
-    },
-    {
-      "question": "According to the clinical test results, how quickly does the TFS_Alltimate Panthenol 1% Serum demonstrate visible improvement in skin moisture density?",
-      "expected_chunk_id": "alltimate_line_4skus_p13_c0",
-      "rank": 1,
-      "top_chunk_id": "alltimate_line_4skus_p13_c0",
-      "top_similarity": 0.840274305112852
-    },
-    {
-      "question": "What source of raw materials does Ugly Lovely use in its products to reduce waste?",
-      "expected_chunk_id": "ugly_lovely_brand_deck_p10_c0",
-      "rank": 3,
-      "top_chunk_id": "ugly_lovely_mask_p3_c0",
-      "top_similarity": 0.735367971556443
-    },
-    {
-      "question": "What usage claim is stated for the tea tree toner pads in terms of percentage?",
-      "expected_chunk_id": "tea_tree_toner_pads_p7_c0",
+      "question": "What percentage of Multi-Vita is indicated in the name of the TFS_Alltimate serum?",
+      "expected_chunk_id": "alltimate_line_4skus_p17_c0",
       "rank": null,
-      "top_chunk_id": "tea_tree_toner_pads_p3_c0",
-      "top_similarity": 0.746445357981622
+      "top_chunk_id": "alltimate_line_4skus_p16_c0",
+      "top_similarity": 0.80447123971678
     },
     {
-      "question": "What is the price and weight of the UGLY LOVELY Fig Mask?",
-      "expected_chunk_id": "ugly_lovely_brand_deck_p19_c0",
+      "question": "What is the INCI name of the apple extract used in the smart_peeling product?",
+      "expected_chunk_id": "smart_peeling_p11_c0",
+      "rank": 2,
+      "top_chunk_id": "smart_peeling_p10_c0",
+      "top_similarity": 0.763851454951159
+    },
+    {
+      "question": "Which certification body has approved the Therapy Vegan Moisturizing Sun Serum as a vegan product?",
+      "expected_chunk_id": "the_therapy_vegan_line_p35_c0",
       "rank": 1,
-      "top_chunk_id": "ugly_lovely_brand_deck_p19_c0",
-      "top_similarity": 0.735153792205456
+      "top_chunk_id": "the_therapy_vegan_line_p35_c0",
+      "top_similarity": 0.791861102421909
+    },
+    {
+      "question": "Which ingredient in dr_belmeur_pro_retinol_serum is described as a polyethoxylated retinamide form of Vitamin A that provides enhanced stability and absorption?",
+      "expected_chunk_id": "dr_belmeur_pro_retinol_serum_p3_c0",
+      "rank": 3,
+      "top_chunk_id": "dr_belmeur_pro_retinol_serum_p6_c0",
+      "top_similarity": 0.713981712037908
+    },
+    {
+      "question": "When was the Natural Sun Eco training material uploaded?",
+      "expected_chunk_id": "natural_sun_eco_p1_c0",
+      "rank": 1,
+      "top_chunk_id": "natural_sun_eco_p1_c0",
+      "top_similarity": 0.805803086438602
+    },
+    {
+      "question": "How many sheets and what total weight are provided per package of the Rice Water Bright Cleansing Wipes?",
+      "expected_chunk_id": "rice_water_bright_cleansing_line_p13_c0",
+      "rank": 1,
+      "top_chunk_id": "rice_water_bright_cleansing_line_p13_c0",
+      "top_similarity": 0.755367367476568
+    },
+    {
+      "question": "How many fragrance types are excluded from the Daily Repair Blemish Balm Cushion to reduce allergen risk?",
+      "expected_chunk_id": "dr_belmeur_clarifying_centelladerm_p31_c0",
+      "rank": 1,
+      "top_chunk_id": "dr_belmeur_clarifying_centelladerm_p31_c0",
+      "top_similarity": 0.777530926195221
     }
   ]
 }
