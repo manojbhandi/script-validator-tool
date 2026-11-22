@@ -1,0 +1,26 @@
+[
+  {
+    "name": "1. Good script - on brief, claims true",
+    "expect": "High across the board. Most claims supported with cited slides.",
+    "brief": "Product: Tea Tree Toner Pads.\nAudience: men and women 18-28 dealing with oily skin, clogged pores and occasional breakouts.\nKey message: daily gentle exfoliation that calms skin and keeps pores clear.\nMust mention: tea tree, salicylic acid (BHA), 70 sheets.\nTone: calm, dermatological, reassuring - not shouty.\nCTA: Find it at THE FACE SHOP.",
+    "script": "Breakouts don't need a harsh fix. Tea Tree Toner Pads use locally sourced tea tree, known for its soothing and anti-inflammatory effect, with triple acids including salicylic acid to gently lift away dead skin and keep pores clear. Low-irritant pure cotton pads, 70 sheets in a jar, for daily care that doesn't fight your skin. Find it at THE FACE SHOP."
+  },
+  {
+    "name": "2. Great copy, wrong brief",
+    "expect": "Low brief alignment, high message quality. Shows the axes are independent.",
+    "brief": "Product: Jeju Aloe Fresh Soothing Gel.\nAudience: women 35-50 with dry, sensitive skin looking for an anti-ageing night treatment.\nKey message: intensive overnight repair and firmness.\nMust mention: clinically tested firming result, night-time use, 3-month supply.\nTone: luxurious, clinical, premium.\nCTA: Book a consultation at your nearest THE FACE SHOP counter.",
+    "script": "Summer skin, sorted. Jeju Aloe Fresh Soothing Gel goes on light, sinks in fast, and leaves zero stickiness behind. Made with aloe vera grown on Jeju island, it cools sunburn, calms redness and works anywhere you need it - face, arms, legs, all of it. Chuck it in your beach bag. Your skin will thank you later. Grab yours at THE FACE SHOP."
+  },
+  {
+    "name": "3. Polished script, invented claims",
+    "expect": "Good alignment and quality, low claim validity - several unsupported or contradicted.",
+    "brief": "Product: Rice Water Bright Moisture Sunscreen.\nAudience: women 25-40 who wear makeup daily and want sun protection that works as a base.\nKey message: sun protection that preps skin for makeup.\nMust mention: SPF50+ PA++++, panthenol, makeup-prepping texture.\nTone: bright, practical, everyday.\nCTA: Shop now at THE FACE SHOP.",
+    "script": "Your primer and your sunscreen, finally the same step. Rice Water Bright Moisture Sunscreen delivers SPF50+ PA++++ with 5% panthenol and 95% skin-conditioning ingredients, clinically proven to reduce wrinkles in 7 days and lighten dark spots by 40%. Dermatologist-certified, waterproof for 12 hours, and safe for infants under 6 months. Shop now at THE FACE SHOP."
+  },
+  {
+    "name": "4. Claims about a product not in the corpus",
+    "expect": "Most claims unverifiable (low confidence retrieval), validity capped at 5. Tests the coverage report.",
+    "brief": "Product: TFS Arctic Peptide Overnight Mask.\nAudience: women 30-45 with dull, tired skin.\nKey message: wake up with visibly brighter skin.\nMust mention: 12 peptides, overnight use, 100ml jar.\nTone: calm, premium, science-backed.\nCTA: Available now at THE FACE SHOP.",
+    "script": "Sleep does the work. The Arctic Peptide Overnight Mask packs 12 marine peptides and 3% glacial niacinamide into a 100ml jar. Clinically tested to improve skin brightness by 47% after a single night, with hydration lasting 72 hours. Apply as the last step of your evening routine. Available now at THE FACE SHOP."
+  }
+]
